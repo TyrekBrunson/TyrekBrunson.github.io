@@ -1,0 +1,64 @@
+/* Global Styles */
+body {
+    background: #101820FF;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #F2AA4CFF;
+    margin: 0;
+    padding: 0;
+}
+
+/* Content Wrapper */
+#main Content {
+    background: #1C1C1C;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 10px;
+}
+
+/* Heading Styles */
+h1 {
+    color: #F2AA4CFF;
+    text-align: center;
+    font-size: 2em;
+}
+
+h2 {
+    color: #D4AF37;
+}
+
+/* Paragraph Styles */
+p {
+    color: #E1C699;
+}
+
+/* List Styles */
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li {
+    margin: 10px 0;
+    display:inline-block;
+}
+
+/* Link Styles */
+a {
+    text-decoration: none;
+    background: #F2AA4CFF;
+    color: #101820FF;
+    padding: 5px;
+    margin:5px;
+    border-radius: 10px;
+    
+}
+
+a:hover {
+    color: white;
+}
+
+/* ID Styles */
+#assignments {
+    padding: 10px;
+}
