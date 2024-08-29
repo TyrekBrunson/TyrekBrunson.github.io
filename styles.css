@@ -1,4 +1,3 @@
-/* Global Styles */
 body {
     background: #101820FF;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -7,7 +6,6 @@ body {
     padding: 0;
 }
 
-/* Content Wrapper */
 #main Content {
     background: #1C1C1C;
     padding: 20px;
@@ -16,7 +14,6 @@ body {
     border-radius: 10px;
 }
 
-/* Heading Styles */
 h1 {
     color: #F2AA4CFF;
     text-align: center;
@@ -27,12 +24,10 @@ h2 {
     color: #D4AF37;
 }
 
-/* Paragraph Styles */
 p {
     color: #E1C699;
 }
 
-/* List Styles */
 ul {
     list-style-type: none;
     padding-left: 0;
@@ -43,7 +38,6 @@ li {
     display:inline-block;
 }
 
-/* Link Styles */
 a {
     text-decoration: none;
     background: #F2AA4CFF;
@@ -58,7 +52,6 @@ a:hover {
     color: white;
 }
 
-/* ID Styles */
 #assignments {
     padding: 10px;
 }
