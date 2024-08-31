@@ -20,12 +20,14 @@ body {
 #main-nav li {
     list-style-type: none; /*no bullets*/
     display:inline-block; /* appear on one line */
+    border-bottom: 1px solid violet;
 
 }
 #main-nav a {
     text-decoration: none; /* no underline */
     background: #FF8DA1;
     color:white;
+    display:block;
     padding: 5px;
     margin:5px;
     border-radius: 2px;
