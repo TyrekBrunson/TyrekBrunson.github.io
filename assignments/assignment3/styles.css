@@ -1,9 +1,11 @@
+/* Reset and Box Sizing */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body and General Layout */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -12,11 +14,19 @@ body {
     padding: 20px;
 }
 
+#content {
+    width: 95%;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 5px;
+}
+
 header {
     background: #333;
     color: #fff;
     padding: 10px 0;
     text-align: center;
+    border-radius: 5px;
 }
 
 nav ul {
@@ -24,10 +34,13 @@ nav ul {
     list-style: none;
     justify-content: space-around;
     background: #444;
+    padding-left: 0;
 }
 
 nav ul li {
     flex: 1;
+    list-style: none;
+    border-bottom: 1px solid violet;
 }
 
 nav ul li a {
@@ -36,6 +49,8 @@ nav ul li a {
     text-align: center;
     color: #fff;
     text-decoration: none;
+    background: black;
+    transition: background 0.3s ease;
 }
 
 nav ul li a:hover {
@@ -57,15 +72,93 @@ section article {
 section aside {
     flex: 1;
     padding: 20px;
-    background: #f8f8f8;
+    background: lightsalmon;
+}
+
+#species section {
+    background: lightgreen;
+    padding: 5px;
+    margin: 5px;
+}
+
+#news section {
+    background: lightcyan;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
 }
 
 footer {
-    background: #333;
-    color: #fff;
+    background: #333333; /* Solid color background matching the provided image */
+    color: #eef5e6; /* Text color that provides contrast on the light background */
+    padding: 20px 40px; /* Padding for spacing */
+}
+
+footer h2 {
+    margin-bottom: 20px; /* Space between the title and ideas */
+    color: #eef5e6; /* Consistent text color */
+}
+
+.idea-container {
+    display: flex;
+    flex-direction: column; /* Stack the idea blocks vertically */
+    gap: 20px; /* Space between each idea block */
+}
+
+.idea-block {
+    display: flex;
+    align-items: center; /* Center content vertically */
+    background: #333333; /* Match the background color of the footer */
+    padding: 10px;
+    border-radius: 5px;
+    color: #eef5e6; /* Ensure text inside is readable and matches the overall text color */
+}
+
+.idea-block img {
+    flex-shrink: 0; /* Prevent image from shrinking */
+    width: 200px; /* Set image size */
+    height: 200px; /* Set image size */
+    margin-right: 20px; /* Space between image and text */
+}
+
+.idea-content h2 {
+    margin-bottom: 10px; /* Space between the idea title and text */
+    color: #eef5e6; /* Matching the text color */
+}
+
+.idea-content p {
+    margin: 0;
+    color: #eef5e6; /* Matching the text color */
+}
+
+footer p {
     text-align: center;
-    padding: 10px 0;
-    margin-top: 20px;
+    margin-top: 30px; /* Space above the footer text */
+    color: #eef5e6; /* Consistent text color */
+}
+
+.content-block {
+    margin: 10px; /* Added margin to space out the blocks */
+    display: inline-block;
+    width: calc(25% - 20px); /* Adjusted width to account for margins */
+    vertical-align: top;
+}
+
+.content-block h2 {
+    margin-bottom: 5px;
+}
+
+.content-block img {
+    display: block;
+    max-width: 100%;
+    margin: 10px auto; /* Center the images within the blocks */
+}
+
+.content-block p {
+    margin-bottom: 10px;
 }
 
 /* Media Queries */
@@ -82,5 +175,35 @@ footer {
     section article {
         margin-right: 0;
         margin-bottom: 20px;
+    }
+
+    .content-block {
+        width: 100%; /* Make content blocks full-width on smaller screens */
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .columns {
+        display: flex;
+    }
+
+    .one {
+        flex: 1;
+    }
+
+    .two {
+        flex: 2;
+    }
+
+    .three {
+        flex: 3;
+    }
+
+    .four {
+        flex: 4;
+    }
+
+    #main-nav li {
+        flex: 1;
     }
 }
