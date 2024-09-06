@@ -1,4 +1,10 @@
 /* Structure */
+:root{
+    --main-background-color:skyblue;
+    --galery-back:aliceblue;
+    --primary-color:darkblue;
+    --highlight-color:pink;
+}
 body {
     background-color: skyblue;
     font-family: Arial, Helvetica, sans-serif;
