@@ -597,6 +597,15 @@ body {
     margin-bottom: 20px;
 }
 
+/* Image adjustment for the footer section */
+.footer-top img {
+    max-width: 300px; /* Set a maximum width for the image */
+    height: auto; /* Let the height adjust automatically to maintain aspect ratio */
+    display: block; /* Ensure the image does not overflow */
+    float: left; /* Align the image to the left */
+    margin-right: 40px; /* Optional: Add some space to the right of the image */
+}
+
 .footer-social a img {
     margin: 0 10px;
     width: 30px;
