@@ -19,14 +19,14 @@ main {
     margin: auto;
 }
 
-.assignments {
+.assignments, .projects {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: space-between;
 }
 
-.assignment {
+.assignment, .project {
     background: #1C1C1C;
     border-radius: 10px;
     overflow: hidden;
@@ -35,15 +35,16 @@ main {
     flex-direction: column;
 }
 
-.assignment img {
-    width: 500px;
-    height: 281px;
+.assignment img, .project img {
+    width: 100%;
+    height: auto;
     object-fit: cover;
 }
 
 .description {
     padding: 20px;
 }
+
 .description a {
     display: inline-block;
     margin-top: 10px;
@@ -59,6 +60,7 @@ main {
     background: #D4AF37;
     color: white;
 }
+
 .description h3 {
     margin-top: 0;
     color: #D4AF37;
@@ -77,11 +79,11 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .assignments {
+    .assignments, .projects {
         flex-direction: column;
     }
 
-    .assignment {
+    .assignment, .project {
         width: 100%;
     }
 }
