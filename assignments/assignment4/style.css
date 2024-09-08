@@ -14,6 +14,58 @@ body {
     color: #fff;
 }
 
+/* Graduate School Admissions Box */
+.hero-text {
+    position: absolute;
+    top: 95%; /* Keep this to control how much the box overlaps the image */
+    left: 50%;
+    transform: translateX(-5%) scale(0.8); /* Adjust translateX for horizontal movement, scale for resizing */
+    background-color: #5c0008;
+    color: #fff;
+    padding: 10px 20px; /* Reduced padding for a closer fit */
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    z-index: 10; /* Ensure the box is on top */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: -50px; /* Add negative margin to overlap the next section */
+    max-width: 840px; /* Optional: set a max-width if needed */
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 600px; /* Set this to the actual height of your hero image */
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Intro Text Section */
+.intro-text {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+    margin-top: 0; /* Remove any margins that push the section down */
+}
+
+
+/* Add margin to the section below to ensure it doesn't overlap */
+.intro-text {
+    margin-top: 100px; /* Adjust this value to make room for the red box */
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.hero {
+    position: relative; /* This ensures the hero image is the reference for positioning the box */
+}
+
 .header-logo img {
     height: 50px;
 }
@@ -70,7 +122,7 @@ body {
 }
 
 .navbar ul li a:hover {
-    color: #f2aa4c; /* Accent color on hover */
+    color: #fffc; /* Accent color on hover */
 }
 
 /* Hero Section */
@@ -169,61 +221,71 @@ body {
 /* Explore Degree Programs Section */
 .explore-programs {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     background-color: #5c0008; /* USC Maroon */
-    padding: 60px 20px;
+    padding: 0; /* Ensure there is no padding */
     color: white;
+    margin-bottom: 0; /* Remove any potential margin */
+}
+
+/* Remove any margin from the next section */
+.investment-section {
+    margin-top: 0; /* Remove top margin to eliminate gap */
+    padding-top: 0; /* Ensure padding is not causing the gap */
+    background-color: #f1f1f1;
 }
 
 .explore-programs .container {
     display: flex;
-    flex-wrap: wrap;
     max-width: 1200px;
     width: 100%;
+    justify-content: space-between;
+    align-items: stretch; /* Ensure the image and text box are the same height */
 }
 
 .program-content {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    align-items: stretch; /* Ensure both elements stretch to equal height */
     width: 100%;
 }
 
 .program-image img {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
+    width: 100%; /* Adjust the width as necessary */
+    height: 100%; /* Set the height to match the red box */
+    object-fit: cover; /* Scale the image properly without distortion */
 }
 
 .program-text {
-    max-width: 500px;
-    padding-left: 40px;
+    width: 50%; /* Adjust the width to match the image */
+    padding: 40px; /* Add padding for spacing */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center the text vertically */
+    height: 100%; /* Make the red box match the image height */
 }
 
-.program-text h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .program-content {
+        flex-direction: column; /* Stack image and text vertically */
+    }
+
+    .program-image img {
+        width: 100%; /* Full width for image on mobile */
+        height: auto; /* Let height adjust automatically */
+    }
+
+    .program-text {
+        width: 100%; /* Full width for text on mobile */
+        text-align: center;
+    }
+
+    .cta-button {
+        margin: 20px auto 0 auto; /* Center button on mobile */
+    }
 }
 
-.program-text p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-}
-
-.cta-button {
-    display: inline-block;
-    background-color: #000;
-    color: #fff;
-    padding: 15px 20px;
-    text-decoration: none;
-    font-size: 1.2rem;
-    margin-top: 20px;
-}
-
-.cta-button:hover {
-    background-color: #333;
-}
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
@@ -281,7 +343,7 @@ body {
 }
 
 .cta-button:hover {
-    background-color: #444;
+    background-color: #fff;
 }
 
 /* Responsive Design */
@@ -302,7 +364,7 @@ body {
 
 /* Paying for School Section */
 .paying-for-school {
-    background-color: #f1f1f1;
+    background-color: #fff;
     padding: 60px 20px;
     text-align: center;
 }
@@ -383,39 +445,80 @@ body {
 .next-step {
     background-color: #000; /* Black background */
     color: #fff;
-    padding: 60px 20px;
+    display: flex;
+    padding: 0; /* Remove padding for a clean layout */
+    justify-content: space-between;
+    align-items: stretch; /* Make sure both image and text stretch equally */
+    margin-bottom: 0; /* Ensure no extra margin is added */
 }
 
 .next-step .container {
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.step-image {
-    flex-basis: 45%;
-}
-
-.step-image img {
+    max-width: 1200px;
     width: 100%;
-    height: auto;
+    justify-content: space-between;
+    align-items: stretch; /* Ensure image and text stretch to match height */
 }
 
+/* Image in the next-step section */
+.step-image img {
+    width: 100%; /* Make the image take full width of its container */
+    height: 100%; /* Ensure the image matches the height of the text box */
+    object-fit: cover; /* Maintain aspect ratio */
+}
+
+/* Text content in the next-step section */
 .step-text {
-    flex-basis: 45%;
+    width: 50%; /* Make the text container take half of the width */
+    padding: 40px; /* Add padding around the text for spacing */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center the text */
 }
 
-.step-text h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.step-text p {
+/* Button styling */
+.step-text .cta-button {
+    background-color: #5c0008; /* Dark red background */
+    color: #fff;
+    padding: 15px 10px;
     font-size: 1.2rem;
-    margin-bottom: 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 2px solid #fff; /* Add white border to the button */
+    transition: background-color 0.3s ease;
+    max-width: 150px;
 }
 
+/* Button hover effect */
+.step-text .cta-button:hover {
+    color: #5c0008; /* Text becomes dark red on hover */
+    background-color: #fff; /* White background on hover */
+    border-color: #5c0008; /* Dark red border on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .next-step {
+        flex-direction: column; /* Stack image and text vertically on smaller screens */
+    }
+
+    .step-image img {
+        width: 100%; /* Full width for image on smaller screens */
+        height: auto; /* Auto adjust the height */
+    }
+
+    .step-text {
+        width: 100%; /* Full width for text container on smaller screens */
+        text-align: center;
+    }
+
+    .step-text .cta-button {
+        margin: 20px auto 0 auto; /* Center the button on mobile screens */
+    }
+}
+
+
+/* Global Button Styles */
 .cta-button {
     background-color: #5c0008;
     color: #fff;
@@ -427,7 +530,19 @@ body {
 }
 
 .cta-button:hover {
-    background-color: #333;
+    color: #5c0008;
+    background-color: #fff;
+}
+
+/* Specific Styles for the Black Button */
+.cta-button-black {
+    background-color: #000; /* Black background */
+    border: 2px solid #fff; /* White border */
+}
+
+.cta-button-black:hover {
+    color: #5c0008; /* Red text on hover */
+    background-color: #fff; /* White background on hover */
 }
 
 /* Footer Section */
