@@ -14,6 +14,95 @@ body {
     color: #fff;
 }
 
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.header-left img {
+    height: 50px;
+    margin-right: 20px;
+}
+
+.gateways {
+    display: flex;
+    gap: 15px;
+}
+
+.gateways a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Align header-right to the top right */
+.header-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.header-right .header-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.header-right .header-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.header-right .header-links li a:hover {
+    text-decoration: underline;
+}
+
+/* Position the search bar on the right of the header */
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.search-bar input {
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #fff;
+    background-color: #333;
+    color: #fff;
+}
+
+.search-bar button {
+    background-color: #fff;
+    color: #000;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Flex container to space items properly */
+.header-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 1;
+}
+
+/* Space between links and search bar */
+.header-right .search-bar {
+    margin-left: 20px;
+}
+
+/* Adjust the gap between the links */
+.header-right .header-links {
+    margin-right: 20px;
+}
+
+
 /* Graduate School Admissions Box */
 .hero-text {
     position: absolute;
