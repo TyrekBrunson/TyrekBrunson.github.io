@@ -1,0 +1,433 @@
+:root {
+    --primary-color: #000; /* Dark primary color (black) */
+    --secondary-color: #F2AA4CFF; /* Accent color (orange) */
+    --background-color: #fff; /* Background color (white) */
+    --text-color: #000; /* Default text color (black) */
+}
+
+/* Body and General Page Styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color); /* White background */
+    color: var(--text-color); /* Black text */
+}
+
+/* Header Section */
+header {
+    background-color: var(--primary-color); /* Black background */
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none; /* Remove default bullet points */
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: var(--secondary-color); /* Links are orange */
+    text-decoration: none; /* Remove underline from links */
+}
+
+/* Main Banner Section */
+.main-banner {
+    position: relative;
+    text-align: center;
+    background-color: var(--background-color); /* White background */
+}
+
+.banner-images {
+    display: flex;
+    justify-content: center;
+}
+
+.banner-images img {
+    width: 33.31%; /* Each image takes up one-third of the width */
+    height: auto;
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the text */
+    color: var(--text-color); /* Black text */
+    background-color: rgba(0, 0, 0, 0.5); /* Translucent background for readability */
+    padding: 1rem;
+}
+
+.banner-text h1, .banner-text p, .banner-text button {
+    margin: 10px; /* Space between text and buttons */
+}
+
+/* About Section */
+.about {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.about-text {
+    flex: 1;
+    padding-right: 2rem;
+}
+
+.about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--text-color); /* Use the text color variable */
+}
+
+.about-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+/* Profile Gallery */
+.profile-gallery {
+    display: flex;
+    flex-wrap: wrap; /* Ensure wrapping on smaller screens */
+    gap: 10px; /* Space between images */
+    flex: 1;
+}
+
+/* Adjust the image size */
+.profile-gallery img {
+    width: 45%; /* Set smaller width for each image */
+    height: auto;
+    border: 2px solid var(--primary-color); /* Optional border */
+}
+
+@media (max-width: 768px) {
+    /* Stack images on smaller screens */
+    .profile-gallery {
+        flex-direction: column;
+        align-items: center; /* Center align the images */
+    }
+
+    /* Adjust image size on small screens */
+    .profile-gallery img {
+        width: 80%; /* Make images larger on small screens */
+    }
+}
+
+/* Upcoming Event Section */
+.upcoming-event {
+    background-color: #6f6f6f; /* Grey background */
+    padding: 2rem 0; /* Space around the section */
+    text-align: center;
+    color: var(--background-color); /* White text */
+}
+
+.event-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.upcoming-event h2 {
+    font-size: 2rem;
+    color: var(--text-color); /* Black heading */
+    margin-bottom: 1rem;
+}
+
+.upcoming-event p {
+    font-size: 1rem;
+    color: var(--background-color); /* White text for description */
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.event-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* Buttons for Join Event and Sign Up */
+.event-buttons button {
+    padding: 10px 20px;
+    border: 1px solid var(--primary-color); /* Black border */
+    background-color: var(--background-color); /* White background */
+    color: var(--primary-color); /* Black text */
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+
+/* Hover effect for buttons */
+.event-buttons button:hover {
+    background-color: var(--primary-color); /* Black background on hover */
+    color: var(--background-color); /* White text on hover */
+}
+
+
+/* About NSBE Section with Flexbox Layout */
+.about-nsbe {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.about-text {
+    flex: 1;
+    padding-right: 2rem;
+}
+
+.about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--text-color); /* Black text */
+}
+
+.about-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-color); /* Black text */
+}
+
+.about-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns of images */
+    grid-gap: 10px;
+    flex: 1;
+}
+
+.about-images img {
+    width: 100%;
+    height: auto;
+    border: 2px solid var(--primary-color); /* Optional black border around images */
+}
+
+/* Responsive layout for About NSBE section */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column; /* Stack text and images on small screens */
+    }
+
+    .about-text {
+        padding-right: 0;
+        margin-bottom: 2rem;
+    }
+
+    .about-images {
+        grid-template-columns: 1fr; /* Stack images vertically on small screens */
+    }
+}
+
+/* Subscribe Section */
+.subscribe-section {
+    background-color: #fff;
+}
+
+.subscribe-banner {
+    position: relative;
+    text-align: center;
+    background-color: var(--primary-color);
+    padding: 2rem 0;
+}
+
+.subscribe-banner img {
+    width: 100%; /* Ensure it stays full width */
+    height: auto; /* Maintain the aspect ratio */
+    max-height: 400px; /* Limit the maximum height to 400px */
+    object-fit: cover; /* Ensures the image covers the available area without distortion */
+}
+
+.subscribe-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--background-color);
+}
+
+.subscribe-content h2 {
+    color: var(--background-color);
+    margin-bottom: 1rem;
+}
+
+.subscribe-content form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.subscribe-content input[type="email"] {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 3px;
+    width: 300px;
+}
+
+.subscribe-content button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.subscribe-content button:hover {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+}
+
+/* Footer Section */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2rem;
+    background-color: #4a4a4a; /* Dark gray background for the left section */
+    color: #e0e0e0; /* Light text for the left section */
+    flex-wrap: wrap; /* Ensure content wraps properly on smaller screens */
+}
+
+.footer-left {
+    flex: 1;
+    margin-bottom: 2rem;
+    background-color: #4a4a4a; /* Dark gray */
+    padding: 1rem;
+}
+
+.nsbe-logo {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.footer-left address {
+    font-style: normal;
+    margin-bottom: 1rem;
+    color: #e0e0e0; /* Light gray text */
+}
+
+.footer-left p {
+    font-size: 0.9rem;
+    color: #e0e0e0; /* Light gray text */
+}
+
+.footer-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #e0e0e0; /* Light gray for the right section */
+    padding: 1rem;
+}
+
+.footer-right ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-right ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-right ul li a {
+    color: #333; /* Darker text */
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.footer-right ul li a:hover {
+    text-decoration: underline;
+}
+
+.contact-button {
+    margin-top: 1rem;
+    text-align: left;
+}
+
+.contact-button button {
+    padding: 0.5rem 1rem;
+    background-color: #000; /* Dark button background */
+    color: #fff; /* White text */
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-button button:hover {
+    background-color: #333; /* Darker hover effect */
+}
+
+/* Footer Links and Social Media */
+.footer-links {
+    background-color: #000; /* Black background for social media and footer links */
+    color: #e0e0e0; /* Light text */
+    text-align: center;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.footer-links a {
+    color: #e0e0e0; /* Light text for footer links */
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Social Media Links */
+.social-media {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.social-media a {
+    margin: 0 10px;
+}
+
+.social-media img {
+    width: 24px; /* Set consistent size for social media icons */
+    height: 24px;
+}
+
+/* Responsive design for small screens */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer-left, .footer-right {
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+    
+    .contact-button {
+        text-align: center;
+    }
+}
