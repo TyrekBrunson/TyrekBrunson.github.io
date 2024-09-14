@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 5</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Assignment 5: Introduction to JavaScript</h1>
+
+    <div class="container">
+        <div class="column" id="counter-column" onclick="increaseCount()">
+            <h2>Count</h2>
+            <p id="counter">0</p>
+        </div>
+
+        <div class="column" id="image-column">
+            <h2>Random Image</h2>
+            <img id="random-image" src="https://picsum.photos/200" alt="Random" onclick="refreshImage()">
+        </div>
+
+        <div class="column" id="slider-column">
+            <h2>Slider Move</h2>
+            <input type="range" id="slider" min="0" max="100" value="0" oninput="moveSquare()">
+            <div id="square"></div>
+        </div>
+    </div>
+
+    <footer>@TyrekBrunson.com</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

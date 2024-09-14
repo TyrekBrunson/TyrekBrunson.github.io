@@ -17,6 +17,9 @@ main {
     padding: 20px;
     max-width: 1200px;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .assignments, .projects {
@@ -79,11 +82,17 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .assignments, .projects {
-        flex-direction: column;
-    }
-
     .assignment, .project {
         width: 100%;
+        display: block;
+    }
+    
+    .description {
+        text-align: center;
+    }
+    
+    .assignments, .projects {
+        flex-direction: column;
+        gap: 15px;
     }
 }
