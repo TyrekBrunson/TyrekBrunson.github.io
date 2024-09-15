@@ -11,3 +11,13 @@ document.addEventListener("DOMContentLoaded", function() {
         dropdownContent.style.display = 'none';
     });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Simulate an admin check
+    const isAdmin = true; // Change this flag to control access
+
+    if (!isAdmin) {
+        alert("You do not have access to this page.");
+        window.location.href = "index.html"; // Redirect non-admins to the home page
+    }
+});
