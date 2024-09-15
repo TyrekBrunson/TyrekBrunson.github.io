@@ -5,15 +5,16 @@
     --text-color: #000; /* Default text color (black) */
 }
 
-/* Body and General Page Styling */
+/* General Body Reset */
 body {
     margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
     background-color: var(--background-color); /* White background */
     color: var(--text-color); /* Black text */
 }
 
-/* Main Header Section */
+/* Header Section for larger screens */
 .main-header {
     display: flex;
     justify-content: space-between;
@@ -21,7 +22,148 @@ body {
     padding: 1rem 2rem;
     background-color: #000; /* Black background */
     color: #fff; /* White text */
+    position: fixed; /* Make it fixed at the top */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ensure it covers the full width */
+    z-index: 999; /* Ensure it stays on top of other content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow for a subtle effect */
 }
+
+body {
+    margin-top: 80px; /* Add margin to prevent content from being hidden behind the header */
+}
+
+/* Disable fixed header on mobile */
+@media (max-width: 768px) {
+    .main-header {
+        position: relative; /* Remove the fixed positioning */
+        box-shadow: none; /* Remove the shadow on mobile */
+    }
+
+    body {
+        margin-top: 0; /* Remove the extra margin on mobile */
+    }
+}
+
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap; /* Ensure items wrap on smaller screens */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 10px; /* Add some space between the items */
+}
+
+nav ul li {
+    margin-left: 1rem;
+}
+
+/* Social Icons Container */
+.social-icons {
+    display: flex;
+    justify-content: center; /* Center the icons */
+    align-items: center;
+    flex-wrap: wrap; /* Allow icons to wrap on smaller screens */
+    gap: 10px; /* Add spacing between the icons */
+}
+
+/* Ensure the social icons are not cut off */
+.social-icons img {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px; /* Space between the icons */
+}
+
+/* Responsive fix for smaller screens */
+@media (max-width: 768px) {
+    .social-icons {
+        justify-content: center;
+        gap: 12px; /* Increase the gap to prevent icons from touching */
+    }
+}
+
+/* Responsive fix for smaller screens */
+@media (max-width: 768px) {
+    .header-right {
+        display: flex;
+        flex-direction: column; /* Stack navigation and search/social icons */
+        align-items: center; /* Center align items */
+        gap: 1rem;
+    }
+
+    nav ul {
+        justify-content: center;
+    }
+
+    .search-form {
+        margin-top: 1rem;
+        width: 100%;
+    }
+
+    .social-icons {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    /* Reduce padding in the header to make space */
+    .main-header {
+        padding: 1rem;
+    }
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.nsbe-logo {
+    height: 60px;
+    display: block;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column; /* Stack the header content */
+        padding: 1rem; /* Adjust padding for smaller screens */
+    }
+    
+    .nsbe-logo {
+        height: auto;
+        max-width: 100%; /* Ensure the logo scales properly */
+    }
+    
+    .header-right {
+        margin-top: 1rem;
+        flex-direction: column;
+    }
+
+    /* Adjust banner images for responsiveness */
+    .banner-images img {
+        width: 100%; /* Ensure full width on mobile */
+        height: auto;
+    }
+    
+    /* Make the banner section and text responsive */
+    .main-banner {
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .banner-text {
+        font-size: 1.2rem; /* Smaller text size for mobile */
+    }
+}
+
 
 .header-left {
     display: flex;
