@@ -152,7 +152,7 @@ body {
     display: flex;
     align-items: center;
     gap: 20px;
-    margin-right: 20px;
+    margin-right: 100px;
 }
 
 .search-form input {
