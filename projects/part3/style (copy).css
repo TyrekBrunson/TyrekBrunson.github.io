@@ -14,105 +14,6 @@ body {
     color: var(--text-color); /* Black text */
 }
 
-/* Main Header Styling */
-.main-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    background-color: #000; /* Black background */
-    color: #fff; /* White text */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    position: relative;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-/* Consolidated Mobile Styles */
-@media (max-width: 768px) {
-    /* Hide logo, search bar, and social icons on mobile */
-    .nsbe-logo, 
-    .search-social {
-        display: none !important; /* Ensure it hides properly */
-    }
-
-    /* Hide the links in mobile view */
-    nav ul {
-        display: none !important; /* Hide the navigation links */
-    }
-
-    /* Show the hamburger menu */
-    .hamburger {
-        display: block;
-        cursor: pointer;
-        z-index: 1001;
-        padding-right: 40px; /* Prevent cut off by adding padding to the right */
-    }
-
-    /* Reduce the header height by reducing padding */
-    .main-header {
-        padding: 0.5rem; /* Thinner padding for a slimmer black bar */
-    }
-
-    .hamburger div {
-        width: 25px;
-        height: 3px;
-        background-color: #fff;
-        margin: 5px 0;
-    }
-
-    /* Mobile navigation menu style */
-    .mobile-nav {
-        display: none; /* Initially hidden */
-        flex-direction: column;
-        background-color: #000;
-        position: absolute;
-        top: 50px;
-        right: 0;
-        width: 100%;
-        text-align: center;
-        z-index: 1000;
-    }
-
-    /* Mobile navigation links */
-    .mobile-nav a {
-        padding: 1rem;
-        color: #fff;
-        text-decoration: none;
-        border-bottom: 1px solid #fff;
-    }
-
-    /* Hover effect for mobile links */
-    .mobile-nav a:hover {
-        background-color: #F2AA4CFF;
-        color: #000;
-    }
-}
-
-/* Restore content visibility for larger screens */
-@media (min-width: 769px) {
-    .nsbe-logo, 
-    .search-social {
-        display: flex;
-    }
-
-    nav ul {
-        display: flex; /* Display the navigation links again */
-    }
-
-    .hamburger {
-        display: none;
-    }
-
-    .mobile-nav {
-        display: none;
-    }
-}
-
-
 /* Header Section for larger screens */
 .main-header {
     display: flex;
@@ -173,6 +74,106 @@ body {
     height: 24px;
     vertical-align: middle;
 }
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column; /* Stack the header content */
+        align-items: flex-start; /* Align to left for better visibility */
+        padding: 1rem;
+    }
+
+    /* Reduce logo size for smaller screens */
+    .nsbe-logo {
+        height: 40px; /* Smaller logo for mobile */
+        max-width: 100%;
+    }
+
+    /* Ensure nav items wrap properly */
+    nav ul {
+        display: flex;
+        flex-direction: column; /* Stack the navigation items vertically */
+        align-items: flex-start; /* Align to the left */
+        gap: 10px;
+    }
+
+    nav ul li {
+        margin-left: 0; /* Remove the left margin to avoid text cutoff */
+    }
+
+    nav ul li a {
+        font-size: 1rem; /* Reduce font size for mobile */
+    }
+
+    /* Make sure the search form and social icons stack */
+    .search-social {
+        flex-direction: column; /* Stack search and social icons */
+        gap: 10px;
+        width: 100%; /* Ensure full width for mobile */
+        margin-right: 0;
+    }
+
+    /* Adjust the social icons for mobile */
+    .social-icons {
+        justify-content: flex-start; /* Align icons to the left */
+        gap: 10px;
+    }
+
+    /* Reduce padding in the header */
+    .main-header {
+        padding: 1rem 0.5rem; /* Smaller padding on mobile */
+    }
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.nsbe-logo {
+    height: 60px;
+    display: block;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column; /* Stack the header content */
+        padding: 1rem; /* Adjust padding for smaller screens */
+    }
+    
+    .nsbe-logo {
+        height: auto;
+        max-width: 100%; /* Ensure the logo scales properly */
+    }
+    
+    .header-right {
+        margin-top: 1rem;
+        flex-direction: column;
+    }
+
+    /* Adjust banner images for responsiveness */
+    .banner-images img {
+        width: 100%; /* Ensure full width on mobile */
+        height: auto;
+    }
+    
+    /* Make the banner section and text responsive */
+    .main-banner {
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .banner-text {
+        font-size: 1.2rem; /* Smaller text size for mobile */
+    }
+}
+
 
 .header-left {
     display: flex;
@@ -555,6 +556,37 @@ nav ul li a:hover {
     height: 24px;
 }
 
+/* Main Banner Section */
+.main-banner {
+    position: relative;
+    text-align: center;
+    background-color: var(--background-color); /* White background */
+}
+
+.banner-images {
+    display: flex;
+    justify-content: center;
+}
+
+.banner-images img {
+    width: 33.31%; /* Each image takes up one-third of the width */
+    height: auto;
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the text */
+    color: var(--text-color); /* Black text */
+    background-color: rgba(0, 0, 0, 0.5); /* Translucent background for readability */
+    padding: 1rem;
+}
+
+.banner-text h1, .banner-text p, .banner-text button {
+    margin: 10px; /* Space between text and buttons */
+}
+
 /* About Section */
 .about {
     padding: 2rem;
@@ -902,6 +934,23 @@ nav ul li a:hover {
     height: 24px;
 }
 
+/* Responsive design for small screens */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer-left, .footer-right {
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+    
+    .contact-button {
+        text-align: center;
+    }
+}
+
 /* Timeline Section */
 .timeline-section {
     background-color: #fff; /* Black background */
@@ -970,11 +1019,27 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
+/* Media Queries for small screens */
+@media (max-width: 768px) {
+    .timeline-item {
+        flex-direction: column;
+    }
+
+    .timeline-content {
+        margin-top: 1rem;
+    }
+
+    .timeline-date {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+}
+
 /* Welcome Section */
 .welcome-section {
     background-color: #fff; /* Black background */
     color: #000; /* White text */
-    padding: 6rem;
+    padding: 3rem;
     text-align: center;
 }
 
@@ -1083,6 +1148,18 @@ nav ul li a:hover {
     margin-left: 10px;
 }
 
+/* Media Queries */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-left, .footer-right {
+        margin-bottom: 2rem;
+    }
+}
+
 /* Awards Section */
 .awards-section {
     background-color: #101820; /* Black background */
@@ -1095,7 +1172,6 @@ nav ul li a:hover {
     font-size: 2.5rem;
     color: #F2AA4CFF; /* Orange text */
     margin-bottom: 2rem;
-    padding: 6rem;
 }
 
 .award-item {
@@ -1183,7 +1259,6 @@ nav ul li a:hover {
     font-size: 2.5rem;
     color: #F2AA4CFF; /* Orange text */
     margin-bottom: 2rem;
-    padding: 6rem;
 }
 
 .competition-item {

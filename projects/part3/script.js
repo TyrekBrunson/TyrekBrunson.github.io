@@ -21,3 +21,12 @@ document.addEventListener("DOMContentLoaded", function() {
         window.location.href = "index.html"; // Redirect non-admins to the home page
     }
 });
+
+function toggleMobileMenu() {
+    var mobileMenu = document.getElementById("mobileMenu");
+    if (mobileMenu.style.display === "flex") {
+        mobileMenu.style.display = "none";
+    } else {
+        mobileMenu.style.display = "flex";
+    }
+}

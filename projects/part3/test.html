@@ -3,21 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Timeline - NSBE</title>
+    <title>NSBE Project</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <!-- Header Section -->
     <header class="main-header">
         <div class="header-left">
-            <!-- Wrapping the logo image inside an <a> tag for redirection -->
             <a href="index.html">
-                <img src="images/nsbe-logo.png" alt="NSBE Logo" class="nsbe-logo" id="logo">
+                <img src="images/nsbe-logo.png" alt="NSBE Logo" class="nsbe-logo">
             </a>
         </div>
         <div class="header-right">
-            <nav>
+            <nav class="desktop-nav">
                 <ul>
                     <li><a href="index.html">Welcome</a></li>
                     <li><a href="Welcome.html">About</a></li>
@@ -26,7 +24,7 @@
                         <a href="#" class="dropbtn">Programming</a>
                         <div class="dropdown-content">
                             <a href="awards.html">Awards</a>
-                            <a href="comptitions.html">Competitions</a>
+                            <a href="competitions.html">Competitions</a>
                         </div>
                     </li>
                     <li><a href="https://outlook.office.com/mail/deeplink/compose?mailtouri=mailto%3Anational_partnerships%40nsbe.org">Partners</a></li>
@@ -45,15 +43,15 @@
                 </div>
             </div>
         </div>
-
-            <!-- Hamburger Menu for Mobile -->
-    <div class="hamburger" onclick="toggleMobileMenu()">
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
-
+    
+        <!-- Hamburger Menu for Mobile -->
+<div class="hamburger" onclick="toggleMobileMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
     </header>
+    
 
     <!-- Mobile Navigation Menu -->
     <div class="mobile-nav" id="mobileMenu">
@@ -64,41 +62,19 @@
         <a href="partners.html">Partners</a>
     </div>
 
-    <!-- Timeline Section -->
-    <section class="timeline-section">
-        <h1>50 Years of NSBE</h1>
-
-        <div class="timeline-container">
-            <div class="timeline-item">
-                <div class="timeline-date">2023</div>
-                <div class="timeline-content">
-                    <img src="https://via.placeholder.com/600x400?text=2023+Event" alt="2023 Event">
-                    <h3>Lorem Ipsum Event Title</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae eros sed nisi efficitur dictum.</p>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-date">2022</div>
-                <div class="timeline-content">
-                    <img src="https://via.placeholder.com/600x400?text=2022+Event" alt="2022 Event">
-                    <h3>Placeholder Title for 2022 Event</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae eros sed nisi efficitur dictum.</p>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-date">2021</div>
-                <div class="timeline-content">
-                    <img src="https://via.placeholder.com/600x400?text=2021+Event" alt="2021 Event">
-                    <h3>Another Placeholder Title</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae eros sed nisi efficitur dictum.</p>
-                </div>
+    <!-- Content Section -->
+    <section class="upcoming-event">
+        <div class="event-container">
+            <h2>Upcoming NESBE Event</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+            <div class="event-buttons">
+                <button class="join-event-btn">Join Event</button>
+                <button class="sign-up-btn">Sign Up</button>
             </div>
         </div>
     </section>
 
     <script src="script.js"></script>
-
+    
 </body>
 </html>
