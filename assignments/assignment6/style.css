@@ -1,0 +1,103 @@
+/* General body style */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  /* Header style */
+  header {
+    margin-bottom: 30px;
+  }
+  
+  /* Navigation - Ensure nav items are displayed properly */
+  #main-nav ul {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  #main-nav li {
+    display: inline-block;
+  }
+  
+  #main-nav a {
+    text-decoration: none;
+    color: #555;
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: #eee;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  #main-nav a:hover {
+    cursor: pointer;
+    background-color: #ddd;
+    color: #000;
+  }
+  
+  /* Arrow cursor */
+  #toggle-nav span {
+    cursor: pointer;
+  }
+  
+  /* Ensure hidden sections are hidden properly */
+  .hidden {
+    display: none;
+  }
+  
+  /* Align slider and ensure it's visible */
+  #slider {
+    width: 80%;
+    margin: 20px auto;
+    display: block;
+  }
+  
+  /* Image container */
+  #image-container img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+  }
+  
+  /* Exercise sections */
+  .exercise-section {
+    margin: 20px 0;
+  }
+  
+  /* Footer styling */
+  footer {
+    margin-top: 30px;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  /* Button styling */
+  button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  
+  /* Mobile Styles */
+  @media (max-width: 600px) {
+    #main-nav ul {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    #main-nav li {
+      margin: 10px 0;
+    }
+  
+    button {
+      width: 100%; /* Full-width buttons on small screens */
+      max-width: 300px;
+    }
+  }
+  
