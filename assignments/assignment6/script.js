@@ -56,12 +56,12 @@ const navItems = document.getElementById("nav-items");
 const arrow = document.getElementById("arrow");
 
 toggleNav.onclick = () => {
-  navItems.classList.toggle("active");
+  navItems.classList.toggle("active"); // Toggle visibility
 
   // Update the arrow direction based on the visibility of the nav items
   if (navItems.classList.contains("active")) {
-    arrow.textContent = "▲"; // Arrow points up when exercises are visible
+    arrow.textContent = "▲"; // Arrow points up when items are visible
   } else {
-    arrow.textContent = "▼"; // Arrow points down when exercises are hidden
+    arrow.textContent = "▼"; // Arrow points down when items are hidden
   }
 };

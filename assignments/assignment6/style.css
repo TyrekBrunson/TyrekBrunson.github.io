@@ -118,6 +118,14 @@ button:hover {
     display: block; /* Show when arrow is clicked */
   }
 
+  #main-nav #nav-items.active {
+    display: block !important;
+  }
+  
+  #main-nav #nav-items {
+    display: none !important;
+  }
+
   #main-nav li {
     margin: 10px 0;
   }
