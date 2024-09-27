@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-6">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment 8</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header and Navigation -->
+  <header>
+    <h1>Assignment 6</h1>
+    <h2>If Statements</h2>
+    <nav id="main-nav">
+      <!-- Toggle for mobile view -->
+      <div id="toggle-nav">
+        <span id="arrow">▼</span>
+      </div>
+      <!-- Exercises List -->
+      <ul id="nav-items">
+        <li><a href="#" id="exercise-1">Exercise 1</a></li>
+        <li><a href="#" id="exercise-2">Exercise 2</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Color Slider (Exercise 1) -->
+    <section id="color-slider" class="exercise-section">
+      <h3>Color Slider</h3>
+      <input type="range" id="slider" min="0" max="255" value="0">
+      <p id="slider-message">Slide to change the color</p>
+    </section>
+
+    <!-- Picture Chooser (Exercise 2) -->
+    <section id="picture-chooser" class="exercise-section hidden">
+      <h3>Picture Chooser</h3>
+      <button data-size="200">Small</button>
+      <button data-size="400">Medium</button>
+      <button data-size="600">Large</button>
+      <div id="image-container">
+        <img id="chosen-image" src="https://picsum.photos/200" alt="Placeholder Image">
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>@TyrekBrunson.com</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+/* General body style */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Header style */
+header {
+  margin-bottom: 30px;
+}
+
+/* Navigation for desktop */
+#main-nav ul {
+  list-style-type: none;
+  padding-left: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+#main-nav li {
+  display: inline-block;
+}
+
+#main-nav a {
+  text-decoration: none;
+  color: #555;
+  font-size: 16px;
+  padding: 10px 20px;
+  background-color: #eee;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#main-nav a:hover {
+  cursor: pointer;
+  background-color: #ddd;
+  color: #000;
+}
+
+/* Arrow cursor for mobile view only */
+#toggle-nav {
+  display: none;
+}
+
+#toggle-nav span {
+  cursor: pointer;
+  font-size: 24px;
+}
+
+/* Hidden elements */
+.hidden {
+  display: none;
+}
+
+/* Align slider and ensure it's visible */
+#slider {
+  width: 80%;
+  margin: 20px auto;
+  display: block;
+}
+
+/* Image container */
+#image-container img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}
+
+/* Exercise sections */
+.exercise-section {
+  margin: 20px 0;
+}
+
+/* Footer styling */
+footer {
+  margin-top: 30px;
+  font-size: 14px;
+  color: #666;
+}
+
+/* Button styling */
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  background-color: #ddd;
+  color: #333;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #bbb;
+}
+
+/* Mobile Styles for navigation */
+@media (max-width: 600px) {
+  #toggle-nav {
+    display: block; /* Show the toggle arrow on mobile */
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  #nav-items {
+    display: none; /* Hide navigation items initially on mobile */
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  #nav-items.active {
+    display: block; /* Show when arrow is clicked */
+  }
+
+  #main-nav #nav-items.active {
+    display: block !important;
+  }
+  
+  #main-nav #nav-items {
+    display: none !important;
+  }
+
+  #main-nav li {
+    margin: 10px 0;
+  }
+
+  button {
+    width: 100%; /* Full-width buttons on small screens */
+    max-width: 300px;
+  }
+}
+
+/* Desktop Style */
+@media (min-width: 601px) {
+  #main-nav ul {
+    display: flex; /* Ensure exercises are always shown on desktop */
+    justify-content: center;
+    gap: 20px;
+  }
+
+  #toggle-nav {
+    display: none; /* Hide the arrow on desktop */
+  }
+}
+
+/* Style for the color slider container */
+#color-slider {
+  background-color: #8B0000; /* Dark red background for slider container */
+  padding: 20px;
+  border-radius: 10px;
+  color: #fff;
+}
+
+/* Style for the slider itself */
+#slider {
+  width: 80%;
+  margin: 20px auto;
+  display: block;
+  background: #fff; /* Slider background color */
+  height: 20px;
+  border-radius: 10px;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+#slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: #0e008b; /* Thumb color */
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+#slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background-color: #0e008b; /* Thumb color */
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+/* Message styling */
+#slider-message {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #fff;
+  font-weight: bold;
+}
