@@ -1,67 +1,32 @@
-// Handle exercise switching
-const colorSliderSection = document.getElementById("color-slider");
-const pictureChooserSection = document.getElementById("picture-chooser");
-
-// Initially show Color Slider and hide Picture Chooser
-colorSliderSection.classList.remove("hidden");
-pictureChooserSection.classList.add("hidden");
-
-document.getElementById("exercise-1").onclick = (event) => {
-  event.preventDefault();
-  colorSliderSection.classList.remove("hidden"); // Show Color Slider
-  pictureChooserSection.classList.add("hidden"); // Hide Picture Chooser
+// Array of images and their descriptions
+const images = {
+  "birthday.jpg": { title: "Party Time", description: "A cute figure with a party hat" },
+  "clown.jpg": { title: "Formal Event", description: "Stickman dressed for a formal occasion" },
+  "rain.jpg": { title: "Rainy Day", description: "Holding an umbrella for a rainy day" },
+  "read.jpg": { title: "Studying", description: "A figure holding a book, ready to study" },
+  "shovel.jpg": { title: "Gardening", description: "Enjoying gardening with a shovel" },
+  "work.jpg": { title: "Relaxing", description: "Relaxing while using a laptop" }
 };
 
-document.getElementById("exercise-2").onclick = (event) => {
-  event.preventDefault();
-  pictureChooserSection.classList.remove("hidden"); // Show Picture Chooser
-  colorSliderSection.classList.add("hidden"); // Hide Color Slider
-};
+// Function to load images dynamically
+function loadImages() {
+  const gallery = document.getElementById('image-gallery');
 
-// Get the slider and slider message elements
-const slider = document.getElementById("slider");
-const sliderMessage = document.getElementById("slider-message");
-
-// Slider input event to change the background color of the color-slider container
-slider.oninput = () => {
-  const redValue = slider.value;
-  
-  // Update the background color of the color-slider container
-  colorSliderSection.style.backgroundColor = `rgb(${redValue}, 0, 0)`;
-
-  // Update the message based on the slider value
-  if (redValue < 85) {
-    sliderMessage.textContent = "Chill";
-  } else if (redValue < 170) {
-    sliderMessage.textContent = "Getting Warm";
-  } else {
-    sliderMessage.textContent = "Red Hot!";
+  for (const [filename, details] of Object.entries(images)) {
+      const imgElement = document.createElement('img');
+      // Correct relative path for loading images
+      imgElement.src = 'images/' + filename;
+      imgElement.alt = details.title;
+      imgElement.addEventListener('click', () => displayDescription(details.title, details.description));
+      gallery.appendChild(imgElement);
   }
-};
+}
 
-// Picture Chooser functionality
-const buttons = document.querySelectorAll("#picture-chooser button");
-const image = document.getElementById("chosen-image");
+// Function to display description on click
+function displayDescription(title, description) {
+  document.getElementById('image-description-title').innerText = title;
+  document.getElementById('image-description').innerText = description;
+}
 
-buttons.forEach(button => {
-  button.onclick = (event) => {
-    const size = event.target.getAttribute("data-size");
-    image.src = `https://picsum.photos/${size}`;
-  };
-});
-
-// Toggle Navigation Menu for mobile
-const toggleNav = document.getElementById("toggle-nav");
-const navItems = document.getElementById("nav-items");
-const arrow = document.getElementById("arrow");
-
-toggleNav.onclick = () => {
-  navItems.classList.toggle("active"); // Toggle visibility
-
-  // Update the arrow direction based on the visibility of the nav items
-  if (navItems.classList.contains("active")) {
-    arrow.textContent = "▲"; // Arrow points up when items are visible
-  } else {
-    arrow.textContent = "▼"; // Arrow points down when items are hidden
-  }
-};
+// Load the images on page load
+window.onload = loadImages;
