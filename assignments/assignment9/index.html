@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 9 - Classes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Assignment 9 - Birds</h1>
+    <div class="bird-container" id="birdContainer"></div>
+
+    <!-- Modal -->
+    <div id="birdModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="birdTitle"></h2>
+                <span class="close" onclick="closeModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="text-content">
+                    <p><strong>Size:</strong> <span id="birdSize"></span></p>
+                    <p><strong>Lifespan:</strong> <span id="birdLifespan"></span></p>
+                    <p><strong>Food:</strong> <span id="birdFood"></span></p>
+                    <p><strong>Habitat:</strong> <span id="birdHabitat"></span></p>
+                    <p><strong>Interesting Fact:</strong> <span id="birdFact"></span></p>
+                </div>
+                <img id="birdImage" src="" alt="">
+            </div>
+            <div class="modal-footer">
+                <p>Enjoy the bird info!</p>
+            </div>
+        </div>
+    </div>
+    
+
+<!-- Footer -->
+<footer>
+    <p><a href="https://stock.adobe.com/" target="_blank" style="text-decoration: none; color: #6b7a8f;">Images from Adobe Stock</a></p>
+    <p>@TyrekBrunson.com</p>
+</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
