@@ -11,6 +11,7 @@
     <!-- Header Section (You might already have this) -->
     <header class="main-header">
         <div class="header-left">
+            <!-- Wrapping the logo image inside an <a> tag for redirection -->
             <a href="index.html">
                 <img src="images/nsbe-logo.png" alt="NSBE Logo" class="nsbe-logo" id="logo">
             </a>
@@ -21,10 +22,46 @@
                     <li><a href="index.html">Welcome</a></li>
                     <li><a href="Welcome.html">About</a></li>
                     <li><a href="Timeline.html">Timeline</a></li>
-                    <!-- Add other links as needed -->
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Programming</a>
+                        <div class="dropdown-content">
+                            <a href="awards.html">Awards</a>
+                            <a href="comptitions.html">Competitions</a>
+                        </div>
+                    </li>
                 </ul>
             </nav>
+            <div class="search-social">
+                <form action="#" class="search-form">
+                    <input type="text" placeholder="Search">
+                    <button type="submit">🔍</button>
+                </form>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/nsbeconvention"><img src="images/facebook-app-round-white-icon.webp" alt="Facebook"></a>
+                    <a href="https://www.instagram.com/nsbeconvention"><img src="images/instagram-new.png" alt="Instagram"></a>
+                    <a href="https://www.linkedin.com/company/national-society-of-black-engineers/mycompany/"><img src="images/linkedin.png" alt="LinkedIn"></a>
+                    <a href="https://twitter.com/nsbeconvention"><img src="images/x-social-media-white-icon.png" alt="X"></a>
+                    <a href="https://outlook.office.com/mail/deeplink/compose?mailtouri=mailto%3Anational_partnerships%40nsbe.org"><img src="images/email-5-xxl.png" alt="X"></a>
+                </div>
+            </div>
         </div>
+
+        <!-- Social Media Icons for Mobile -->
+    <div class="mobile-social-icons">
+        <a href="https://www.facebook.com/nsbeconvention"><img src="images/facebook-app-round-white-icon.webp" alt="Facebook"></a>
+        <a href="https://www.instagram.com/nsbeconvention"><img src="images/instagram-new.png" alt="Instagram"></a>
+        <a href="https://www.linkedin.com/company/national-society-of-black-engineers/mycompany/"><img src="images/linkedin.png" alt="LinkedIn"></a>
+        <a href="https://twitter.com/nsbeconvention"><img src="images/x-social-media-white-icon.png" alt="X"></a>
+        <a href="https://outlook.office.com/mail/deeplink/compose?mailtouri=mailto%3Anational_partnerships%40nsbe.org"><img src="images/email-5-xxl.png" alt="X"></a>
+    </div>
+
+            <!-- Hamburger Menu for Mobile -->
+    <div class="hamburger" onclick="toggleMobileMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
     </header>
 
     <!-- Timeline Section -->
@@ -34,15 +71,20 @@
     </section>
 
     <!-- Footer Section -->
-    <footer class="footer">
-        <div class="footer-links">
-            <a href="terms.html">Terms & Conditions</a> |
-            <a href="Privacy.html">Privacy Policy</a> |
-            <a href="https://nsbe.org/home/contact-us/">Contact us</a>
-        </div>
-    </footer>
+    <div class="footer-links">
+        <a href="terms.html">Terms & Conditions</a> |
+        <a href="Privacy.html">Privacy Policy</a> |
+        <a href="https://nsbe.org/home/contact-us/">Contact us</a>
+    </div>
+    
+    <!-- Social Media Links Section -->
+    <div class="social-media">
+        <a href="https://www.facebook.com/nsbeconvention"><img src="images/antOutline-facebook 1.png" alt="Facebook"></a>
+        <a href="https://www.instagram.com/nsbeconvention"><img src="images/antOutline-instagram 1.png" alt="Instagram"></a>
+        <a href="https://www.linkedin.com/company/national-society-of-black-engineers/mycompany/"><img src="images/antFill-linkedin 1.png" alt="LinkedIn"></a>
+        <a href="https://twitter.com/nsbeconvention"><img src="images/X.webp" alt="X"></a> <!-- Placeholder for X icon -->
+    </div>
 
-    <!-- Include the script that loads the JSON and renders the timeline -->
     <script src="script.js"></script>
 </body>
 </html>

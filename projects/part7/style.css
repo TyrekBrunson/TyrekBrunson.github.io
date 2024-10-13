@@ -904,100 +904,83 @@ nav ul li a:hover {
 
 /* Timeline Section */
 .timeline-section {
-    background-color: #333; /* Black background */
-    padding: 2rem;
+    background-color: #333; /* Dark background */
+    padding: 3rem 0; /* More padding for visual separation */
     color: #F2AA4CFF; /* Orange text for titles */
     text-align: center;
-}
-
-.timeline-section h1 {
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-    color: #fff; /* White heading */
 }
 
 .timeline-container {
     display: flex;
     flex-direction: column;
-    position: relative;
     margin: 0 auto;
-    padding: 2rem 0; /* Optional: Adds padding to the top and bottom of the container */
-    max-width: 1200px;
-    align-items: center; /* Centers the timeline items */
-    gap: 3rem; /* Adds space between each timeline item */
+    padding: 2rem 0;
+    max-width: 1200px; /* Ensure it's centered and doesn't stretch too far */
+    align-items: center;
+    gap: 3rem; /* Spacing between timeline items */
 }
 
 .timeline-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 2rem;
-    padding: 1.5rem;
     background-color: #101820;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
-    border-radius: 8px; /* Optional: Makes the boxes have rounded corners */
-    max-width: 900px; /* Optional: Limits the maximum width of each box */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 900px; /* Limit the width of each timeline item */
+    margin: 0 auto; /* Center each item */
+    padding: 2rem;
+    text-align: center;
 }
 
-/* Date Styling */
 .timeline-date {
-    flex: 0 0 100px;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
-    color: #F2AA4CFF; /* Orange text for dates */
-    margin-right: 20px;
-    text-align: left;
-    color: var(--secondary-color); /* Use your orange accent color */
-    margin-bottom: -3rem;
-
+    color: #F2AA4CFF; /* Orange date text */
+    margin-bottom: 1.5rem;
 }
 
 .timeline-content {
-    flex: 1;
-    background-color: #fff; /* White background for content */
+    background-color: #fff;
     padding: 1rem;
     border-radius: 5px;
     color: #000; /* Black text */
+    text-align: center;
 }
 
 .timeline-content h3 {
     font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    color: #000; /* Black for titles */
+    margin-bottom: 1rem;
+    color: #000;
 }
 
 .timeline-content p {
     font-size: 1rem;
-    color: #333; /* Dark gray text */
+    color: #333; /* Dark text for better readability */
     line-height: 1.6;
 }
 
+/* Adjust the size and prevent stretching of the images */
 .timeline-content img {
-    width: 100%;
-    height: auto;
+    width: auto; /* Ensures the image doesn't stretch */
+    height: auto; /* Maintains aspect ratio */
+    max-width: 35%; /* Ensures the image fits within its parent */
+    max-height: 400px; /* Set a maximum height to avoid it being too large */
+    object-fit: cover; /* Ensure the image scales correctly while preserving aspect ratio */
     margin-bottom: 1rem;
     border-radius: 5px;
+    
 }
 
-.timeline-item img {
-    width: 100%;  /* Ensures the image fits within the box */
-    height: auto; /* Maintains aspect ratio */
-    max-width: 300px; /* Limits the maximum width of the image */
-    margin-bottom: 1rem; /* Adds some space below the image */
-    border-radius: 5px; /* Optional: Adds rounded corners */
-}
-
+/* Media Queries for Mobile */
 @media (max-width: 768px) {
     .timeline-item {
-        flex-direction: column;
-        padding: 1rem;
+        padding: 1.5rem;
+        max-width: 90%; /* Ensure it fits well on mobile */
     }
 
-    .timeline-item img {
-        max-width: 100%; /* Full width image on mobile */
+    .timeline-content img {
+        width: 100%; /* Full width on mobile */
+        height: auto;
     }
 }
-
 /* Welcome Section */
 .welcome-section {
     background-color: #fff; /* Black background */
