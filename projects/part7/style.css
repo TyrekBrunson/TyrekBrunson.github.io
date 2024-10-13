@@ -921,13 +921,15 @@ nav ul li a:hover {
 }
 
 .timeline-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
     background-color: #101820;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    max-width: 900px; /* Limit the width of each timeline item */
-    margin: 0 auto; /* Center each item */
-    padding: 2rem;
-    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 3rem auto; /* Adds 3rem margin at the bottom of each item */
 }
 
 .timeline-date {
@@ -966,7 +968,6 @@ nav ul li a:hover {
     object-fit: cover; /* Ensure the image scales correctly while preserving aspect ratio */
     margin-bottom: 1rem;
     border-radius: 5px;
-    
 }
 
 /* Media Queries for Mobile */
