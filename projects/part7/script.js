@@ -32,7 +32,7 @@ function toggleMobileMenu() {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    const jsonUrl = "https://github.com/TyrekBrunson/TyrekBrunson.github.io/tree/main/projects/part7/timeline.json"; // Update with your actual GitHub URL
+    const jsonUrl = "https://raw.githubusercontent.com/TyrekBrunson/TyrekBrunson.github.io/main/projects/part7/timeline.json";  // Update with the raw GitHub URL
 
     fetch(jsonUrl)
         .then(response => response.json())
@@ -57,10 +57,6 @@ document.addEventListener("DOMContentLoaded", function() {
                     <ul>
                         ${event.details.map(detail => `<li>${detail}</li>`).join('')}
                     </ul>
-                    <p><strong>Location:</strong> ${event.location}</p>
-                    <p><strong>Attendees:</strong> ${event.attendees}</p>
-                    <p><strong>Theme:</strong> ${event.theme}</p>
-                    <p><strong>Organizer:</strong> ${event.organizer}</p>
                 </div>
             `;
 
@@ -69,3 +65,4 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 });
+
