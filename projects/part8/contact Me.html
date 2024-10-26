@@ -8,8 +8,70 @@
 </head>
 <body>
 
+ <!-- Header Section -->
+ <header class="main-header">
+    <div class="header-left">
+        <a href="index.html">
+            <img src="images/nsbe-logo.png" alt="NSBE Logo" class="nsbe-logo">
+        </a>
+    </div>
+    <div class="header-right">
+        <nav>
+            <ul>
+                <li><a href="index.html">Welcome</a></li>
+                <li><a href="Welcome.html">About</a></li>
+                <li><a href="Timeline.html">Timeline</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Programming</a>
+                    <div class="dropdown-content">
+                        <a href="awards.html">Awards</a>
+                        <a href="comptitions.html">Competitions</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <div class="search-social">
+            <form action="#" class="search-form">
+                <input type="text" placeholder="Search">
+                <button type="submit">🔍</button>
+            </form>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/nsbeconvention"><img src="images/facebook-app-round-white-icon.webp" alt="Facebook"></a>
+                <a href="https://www.instagram.com/nsbeconvention"><img src="images/instagram-new.png" alt="Instagram"></a>
+                <a href="https://www.linkedin.com/company/national-society-of-black-engineers/mycompany/"><img src="images/linkedin.png" alt="LinkedIn"></a>
+                <a href="https://twitter.com/nsbeconvention"><img src="images/x-social-media-white-icon.png" alt="X"></a>
+                <a href="https://outlook.office.com/mail/deeplink/compose?mailtouri=mailto%3Anational_partnerships%40nsbe.org"><img src="images/email-5-xxl.png" alt="X"></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Social Media Icons for Mobile -->
+<div class="mobile-social-icons">
+    <a href="https://www.facebook.com/nsbeconvention"><img src="images/facebook-app-round-white-icon.webp" alt="Facebook"></a>
+    <a href="https://www.instagram.com/nsbeconvention"><img src="images/instagram-new.png" alt="Instagram"></a>
+    <a href="https://www.linkedin.com/company/national-society-of-black-engineers/mycompany/"><img src="images/linkedin.png" alt="LinkedIn"></a>
+    <a href="https://twitter.com/nsbeconvention"><img src="images/x-social-media-white-icon.png" alt="X"></a>
+    <a href="https://outlook.office.com/mail/deeplink/compose?mailtouri=mailto%3Anational_partnerships%40nsbe.org"><img src="images/email-5-xxl.png" alt="X"></a>
+</div>
+        <!-- Hamburger Menu for Mobile -->
+<div class="hamburger" onclick="toggleMobileMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+</header>
+
+<!-- Mobile Navigation Menu -->
+<div class="mobile-nav" id="mobileMenu">
+    <a href="index.html">Welcome</a>
+    <a href="Welcome.html">About</a>
+    <a href="Timeline.html">Timeline</a>
+    <a href="awards.html">Awards</a>
+    <a href="comptitions.html">Comptitions</a>
+</div>
+
 <div class="contact-container">
-    <h1>Contact Me</h1>
+    <h1>Contact Us</h1>
     <p>If you have any questions or would like to get in touch, please fill out the form below:</p>
     
     <!-- Contact Form -->
@@ -49,6 +111,53 @@
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3262.8631174127646!2d-81.03251658475066!3d33.98934838062409!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f8bc911a8195c7%3A0xe1a254ec9607209f!2sNational%20Society%20of%20Black%20Engineers!5e0!3m2!1sen!2sus!4v1698354112335!5m2!1sen!2sus" title="NSBE Location" allowfullscreen></iframe>
     </div>
 </div>
+
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-left">
+        <img src="images/nsbe-logo.png" alt="NSBE Logo" class="nsbe-logo">
+        <address>
+            <strong>National Engineering Society</strong><br>
+            987 Engineering Way<br>
+            Silicon Valley, CA 94043<br>
+            (888) 987-6543
+        </address>
+        <p>&copy; Copyright Convention.nsbe.org 2024</p>
+    </div>
+    <div class="footer-right">
+        <ul>
+            <li><a href="#">Elementary & K-12</a></li>
+            <li><a href="#">Programs</a></li>
+            <li><a href="#">University Level</a></li>
+            <li><a href="#">Professional Development</a></li>
+            <li><a href="#">Corporate Partnerships</a></li>
+            <li><a href="#">Member Resources</a></li>
+            <li><a href="#">Conference Events</a></li>
+        </ul>
+        <div class="contact-button">
+            <a href="contact Me.html" target="_blank">
+                <button>Contact US</button>
+            </a>
+        </div>
+    </div>
+</footer>
+
+<!-- Footer Links -->
+<div class="footer-links">
+    <a href="terms.html">Terms & Conditions</a> |
+    <a href="Privacy.html">Privacy Policy</a> |
+    <a href="https://nsbe.org/home/contact-us/">Contact us</a>
+</div>
+
+<!-- Social Media Links -->
+<div class="social-media">
+    <a href="https://www.facebook.com/nsbeconvention"><img src="images/antOutline-facebook 1.png" alt="Facebook"></a>
+    <a href="https://www.instagram.com/nsbeconvention"><img src="images/antOutline-instagram 1.png" alt="Instagram"></a>
+    <a href="https://www.linkedin.com/company/national-society-of-black-engineers/mycompany/"><img src="images/antFill-linkedin 1.png" alt="LinkedIn"></a>
+    <a href="https://twitter.com/nsbeconvention"><img src="images/X.webp" alt="X"></a> <!-- Placeholder for X icon -->
+</div>
+
+<script src="script.js"></script>
 
 <script src="form.js"></script>
 </body>
